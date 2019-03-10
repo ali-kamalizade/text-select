@@ -1,5 +1,6 @@
 # text-select
 
+[![npm version](https://badge.fury.io/js/%40alidev%2Ftext-select.svg)](https://badge.fury.io/js/%40alidev%2Ftext-select)
 [![Build Status](https://travis-ci.org/ali-kamalizade/text-select.svg?branch=master)](https://travis-ci.org/ali-kamalizade/text-select)
 
 `text-select` is a tiny library to select text on web page.
