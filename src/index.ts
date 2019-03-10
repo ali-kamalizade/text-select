@@ -17,7 +17,7 @@ export function selectElementText(element: Node) {
  */
 export function selectText(element: Node, selectedText: string) {
 	// select element containing the text which is required in order to select a substring
-	this.selectElementText(element);
+	selectElementText(element);
 
 	const selection = document.getSelection();
 	const range = document.createRange();
