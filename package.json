@@ -1,12 +1,13 @@
 {
 	"name": "@alidev/text-select",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A library to select any text on a web page without dependencies",
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
 	"browser": "dist/index.bundle.js",
 	"files": [
-		"dist"
+		"dist",
+		"README.md"
 	],
 	"types": "dist/index.d.ts",
 	"scripts": {
