@@ -5,17 +5,21 @@
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
 	"browser": "dist/index.bundle.js",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "rollup -c",
 		"watch": "rollup -cw"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"rollup": "^1.6.0",
+		"rollup-plugin-terser": "^4.0.4",
 		"rollup-plugin-typescript2": "^0.19.3",
 		"typescript": "^3.3.3333"
 	},
+	"dependencies": {},
 	"keywords": [
 		"NPM",
 		"select",
