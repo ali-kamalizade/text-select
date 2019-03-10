@@ -1,5 +1,7 @@
 # text-select
 
+[![Build Status](https://travis-ci.org/ali-kamalizade/text-select.svg?branch=master)](https://travis-ci.org/ali-kamalizade/text-select)
+
 `text-select` is a tiny library to select text on web page.
 Compared to other solutions, `text-select` can not only select text of HTML elements but you can also select a substring.
 `text-select` can also be used in end-to-end tests (e.g. using Protractor or TestCafe) to select text during tests.
