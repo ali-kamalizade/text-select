@@ -1,4 +1,4 @@
-# text-select - select text on aby web web page
+# text-select - select text on any web web page
 
 [![npm version](https://badge.fury.io/js/%40alidev%2Ftext-select.svg)](https://badge.fury.io/js/%40alidev%2Ftext-select)
 [![Build Status](https://travis-ci.org/ali-kamalizade/text-select.svg?branch=master)](https://travis-ci.org/ali-kamalizade/text-select)
@@ -10,9 +10,10 @@ Compared to other solutions, `text-select` can not only select text of HTML elem
 ## Features
 - Works in browsers and NPM-based projects (e.g. React applications)
 - Select whole text of an element or just select part of it
+- Simple getter functions to get selected text
 - TypeScript support (e.g. handy for Angular projects)
-- Can be used in end-to-end tests
-- Tiny size (~1 KB)
+- Can be used in end-to-end tests to select text
+- Tiny size (~1 KB) without any dependencies: just vanilla JavaScript
 
 ## Installation
 - If you are using NPM: ```npm install @alidev/text-select```
