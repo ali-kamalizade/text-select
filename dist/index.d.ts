@@ -9,3 +9,12 @@ export declare function selectElementText(element: Node): void;
  * @param selectedText {string}
  */
 export declare function selectText(element: Node, selectedText: string): void;
+/**
+ * Get text of selected element
+ */
+export declare function getSelectedElementText(): string;
+/**
+ * Get selected text inside an element
+ * @param selectedText {string}
+ */
+export declare function getSelectedText(selectedText: string): string;

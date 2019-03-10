@@ -53,8 +53,8 @@ export function getSelectedText(selectedText: string) {
 	const selection = document.getSelection();
 	const textNode = selection.anchorNode.firstChild || selection.anchorNode;
 	const startIndex = textNode.textContent.indexOf(selectedText);
-	if (startIndex === -1) {
-		console.warn(selectedText + ' not found in element');
+	if (!selectedText || startIndex === -1) {
+		console.warn(selectedText + ' not found in element', textNode);
 		return '';
 	}
 	const endIndex = startIndex + selectedText.length;

@@ -26,9 +26,12 @@
 <script>
 	function selectElementText(id) {
 		TextSelect.selectElementText(document.getElementById(id));
+		console.log(TextSelect.getSelectedElementText().trim());
 	}
 	function selectText(id, substring) {
 		TextSelect.selectText(document.getElementById(id), substring);
+		debugger;
+		console.log(TextSelect.getSelectedText('').trim());
 	}
 </script>
 </body>

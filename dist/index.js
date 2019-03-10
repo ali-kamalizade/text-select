@@ -1,1 +1,58 @@
-"use strict";function selectElementText(e){const t=document.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}function selectText(e,t){selectElementText(e);const n=document.getSelection(),o=document.createRange(),c=n.anchorNode.firstChild||n.anchorNode;o.selectNode(c),n.removeAllRanges();const l=c.textContent.indexOf(t);if(-1===l)return void console.warn(t+" not found inside element",e);const s=l+t.length;o.setStart(c,l),o.setEnd(c,s),n.removeAllRanges(),n.addRange(o)}function getSelectedElementText(){return document.getSelection().focusNode.textContent}function getSelectedText(e){const t=document.getSelection(),n=t.anchorNode.firstChild||t.anchorNode,o=n.textContent.indexOf(e);if(-1===o)return console.warn(e+" not found in element"),"";const c=o+e.length;return n.textContent.substring(o,c)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.selectElementText=selectElementText,exports.selectText=selectText,exports.getSelectedElementText=getSelectedElementText,exports.getSelectedText=getSelectedText;
+/**
+ * Select whole text of an element
+ * @param element {Node}
+ */
+export function selectElementText(element) {
+    const selection = document.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+}
+/**
+ * Select some text inside an element
+ * @param element {Node}
+ * @param selectedText {string}
+ */
+export function selectText(element, selectedText) {
+    // select element containing the text which is required in order to select a substring
+    selectElementText(element);
+    const selection = document.getSelection();
+    const range = document.createRange();
+    const textNode = selection.anchorNode.firstChild || selection.anchorNode;
+    range.selectNode(textNode);
+    // remove previous selection
+    selection.removeAllRanges();
+    // select actual text
+    const startIndex = textNode.textContent.indexOf(selectedText);
+    if (startIndex === -1) {
+        console.warn(selectedText + ' not found inside element', element);
+        return;
+    }
+    const endIndex = startIndex + selectedText.length;
+    range.setStart(textNode, startIndex);
+    range.setEnd(textNode, endIndex);
+    selection.removeAllRanges();
+    selection.addRange(range);
+}
+/**
+ * Get text of selected element
+ */
+export function getSelectedElementText() {
+    return document.getSelection().focusNode.textContent;
+}
+/**
+ * Get selected text inside an element
+ * @param selectedText {string}
+ */
+export function getSelectedText(selectedText) {
+    const selection = document.getSelection();
+    const textNode = selection.anchorNode.firstChild || selection.anchorNode;
+    const startIndex = textNode.textContent.indexOf(selectedText);
+    if (!selectedText || startIndex === -1) {
+        console.warn(selectedText + ' not found in element', textNode);
+        return '';
+    }
+    const endIndex = startIndex + selectedText.length;
+    return textNode.textContent.substring(startIndex, endIndex);
+}

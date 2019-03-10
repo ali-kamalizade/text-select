@@ -1,5 +1,5 @@
 {
-	"name": "text-select",
+	"name": "@alidev/text-select",
 	"version": "1.0.0",
 	"description": "A library to select any text on a web page without dependencies",
 	"main": "dist/index.js",
@@ -10,7 +10,7 @@
 	],
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "rollup -c",
+		"build": "rollup -c && tsc",
 		"build:watch": "rollup -cw",
 		"test": "testcafe chrome tests/*test*",
 		"test:ci": "testcafe chrome:headless tests/*test*",
