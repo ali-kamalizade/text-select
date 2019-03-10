@@ -5,7 +5,9 @@
 		"module": "es6",
 		"noImplicitAny": true,
 		"outDir": "./dist",
-		"target": "es3"
+		"target": "es2015",
+		"skipLibCheck": true,
+		"types": ["testcafe"]
 	},
 	"exclude": [
 		"node_modules"

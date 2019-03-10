@@ -11,12 +11,16 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "rollup -c",
-		"watch": "rollup -cw"
+		"build:watch": "rollup -cw",
+		"test": "testcafe chrome tests/*test*",
+		"test:ci": "testcafe chrome:headless tests/*test*",
+		"verify": "npm run build && npm run test:ci"
 	},
 	"devDependencies": {
 		"rollup": "^1.6.0",
 		"rollup-plugin-terser": "^4.0.4",
 		"rollup-plugin-typescript2": "^0.19.3",
+		"testcafe": "^1.1.0",
 		"typescript": "^3.3.3333"
 	},
 	"dependencies": {},
@@ -25,7 +29,8 @@
 		"select",
 		"text",
 		"TypeScript",
-		"JavaScript"
+		"JavaScript",
+		"E2E"
 	],
 	"author": "Ali Kamalizade",
 	"license": "MIT"
