@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>text-select</title>
+	<meta name="description" content="text-select">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+	<script src="dist/index.bundle.js"></script>
+</head>
+<body>
+<section class="section">
+	<h1 class="is-size-3 title has-text-centered">text-select</h1>
+	<p id="whole-text-select">
+		<i>Hello world</i>
+	</p>
+	<p id="whole-text-select-with-multiple-lines">
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+	</p>
+	<p id="part-text-select">This is a demo page</p>
+</section>
+<section class="section">
+	<button class="button" onclick="selectElementText('whole-text-select')">Select full text of an element</button>
+	<button class="button" onclick="selectElementText('whole-text-select-with-multiple-lines')">Select full text of an multiline paragraph</button>
+	<button class="button" onclick="selectText('part-text-select', 'demo')">Select full text of an element</button>
+</section>
+<script>
+	function selectElementText(id) {
+		TextSelect.selectElementText(document.getElementById(id));
+	}
+	function selectText(id, substring) {
+		TextSelect.selectText(document.getElementById(id), substring);
+	}
+</script>
+</body>
+</html>

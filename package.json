@@ -1,0 +1,28 @@
+{
+	"name": "text-select",
+	"version": "1.0.0",
+	"description": "A library to select any text on a web page without dependencies",
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"browser": "dist/index.bundle.js",
+	"files": ["dist"],
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "rollup -c",
+		"watch": "rollup -cw"
+	},
+	"dependencies": {
+		"rollup": "^1.6.0",
+		"rollup-plugin-typescript2": "^0.19.3",
+		"typescript": "^3.3.3333"
+	},
+	"keywords": [
+		"NPM",
+		"select",
+		"text",
+		"TypeScript",
+		"JavaScript"
+	],
+	"author": "Ali Kamalizade",
+	"license": "MIT"
+}
