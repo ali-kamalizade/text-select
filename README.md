@@ -20,7 +20,8 @@ Compared to other solutions, `text-select` can not only select text of HTML elem
 - You can also include the script directly. Just download the script from the [dist folder](https://github.com/ali-kamalizade/text-select/tree/master/dist).
 
 ## Get started
-- Usage in NPM:
+- Usage in Node.js projects (ES6 syntax):
+
 ```javascript
 import {selectElementText, selectText} from '@alidev/text-select/dist';
 // Select the whole text of an element
@@ -28,7 +29,8 @@ selectElementText(document.getElementById('intro-header'));
 // Select only a substring of an element's text
 selectText(document.getElementById('contact-email', 'john.doe@ac.me'));
 ```
-- Usage in the browser:
+- Usage in the browser (the `TextSelect` global contains all of the functions):
+
 ```javascript
 <script src="text-select.bundle.js"></script>
 
